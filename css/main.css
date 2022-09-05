@@ -5,12 +5,7 @@
     box-sizing: border-box;
 }
 
-/* header page styles */
-
-body{
-    background-color: white;
-}
-
+/* common body styles and adding fonts */
 @font-face {
     font-family: 'Proxima';
     src: url('../public/fonts/ProximaNova-RegularIt.woff');
@@ -26,3 +21,101 @@ body{
     src: url('../public/fonts/ProximaNova-Semibold.woff');
     font-weight: 600;
 }
+body{
+    background-color: white;
+    font-family: 'Proxima';
+}
+
+/* header styles */
+.header{
+    background-image: url('../public/images/headerBackgroundImage.svg');
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+    
+    
+}
+.header_navigationWrapper{
+    padding: 30px 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_navigationWrapper_nav a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Proxima';
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 28px;
+}
+.header_navigationWrapper_nav a:hover{
+    transition: 0.2s;
+    text-decoration: solid underline #FF8B00 3px;
+}
+.header_navigationWrapper_nav a:last-child{
+    margin-right: 0px;
+}
+.header_offerSlider_text_title{
+    font-weight: 700;
+    font-size: 55px;
+    color: white;
+}
+.header_offerSlider_text_subtitle{
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 15px;
+    color: white;
+    width: 500px;
+}
+.header_offerSlider_text_button{
+    background-color: #FF8B00;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 40px;
+    font-size: 17px;
+    margin-top: 50px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.header_offerSlider_text_button:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.header_offerSlider{
+    padding: 70px 270px 40px 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 250px;
+}
+
+.header_smoothScrolling{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header_smoothScrolling_text{
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.header_smoothScrolling_button{
+    background: none;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+.header_smoothScrolling_button:hover{
+    opacity: 0.3;
+    transition: 0.5s;
+}
+/* nums section style */
