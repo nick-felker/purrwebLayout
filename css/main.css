@@ -23,15 +23,15 @@
 }
 body{
     background-color: white;
-    font-family: 'Proxima';
 }
 
 /* header styles */
 .header{
+    font-family: 'Proxima';
     background-image: url('../public/images/headerBackgroundImage.svg');
     background-position: center;
     background-size: cover;
-    padding-bottom: 70px;
+    padding-bottom: 75px;
     background-repeat: no-repeat;
     
     
@@ -61,6 +61,7 @@ body{
 }
 .header_offerSlider_text_title{
     font-weight: 700;
+    font-family: 'Proxima';
     font-size: 55px;
     color: white;
 }
@@ -68,6 +69,8 @@ body{
     font-weight: 600;
     font-size: 16px;
     margin-top: 15px;
+    font-family: 'Proxima';
+    line-height: 30px;
     color: white;
     width: 500px;
 }
@@ -75,6 +78,7 @@ body{
     background-color: #FF8B00;
     outline: none;
     border: none;
+    font-family: 'Proxima';
     border-radius: 5px;
     padding: 20px 40px;
     font-size: 17px;
@@ -104,6 +108,7 @@ body{
 }
 .header_smoothScrolling_text{
     color: white;
+    font-family: 'Proxima';
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -119,3 +124,138 @@ body{
     transition: 0.5s;
 }
 /* nums section style */
+.offerNums{
+    font-family: 'Proxima';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+.offerNums_elem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #7050E5;
+    margin-right: 100px;
+}
+.offerNums_elem:last-child{
+    margin-right: 0px;
+}
+.offerNums_elem_num{
+    font-family: 'Proxima';
+    font-size: 50px;
+    font-weight: 700;
+    
+}
+.offerNums_elem_text{
+    font-family: 'Proxima';
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/* what we do section style*/
+
+.whatWeDo{
+    font-family: 'Proxima';
+    background-color: #F8F8F8;
+    padding-bottom: 120px;
+    padding-top: 145px;
+}
+.whatWeDo_innerWrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+.whatWeDo_title{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 68px;
+}
+.whatWeDo_title_text{
+    color: #7050E5;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Proxima';
+    margin-top: 20px;
+    padding-right: 40px;
+}
+.whatWeDo_title_angel{
+    width: 35px;
+    position: absolute;
+}
+.whatWeDo_optionsList{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.whatWeDo_optionsList_element{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 72px;
+}
+
+.whatWeDo_optionsList_element_image{
+    width: 140px;
+    margin-left: 50px;
+}
+.whatWeDo_optionsList_element_title{
+    color: #7050E5;
+    font-size: 18px;
+    width: 270px;
+    font-family: 'Proxima';
+    text-transform: uppercase;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+.whatWeDo_optionsList_element_subtitle{
+    color: #878787;
+    width: 280px;
+    font-family: 'Proxima';
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+}
+/* video section styles*/
+.videoInfo{
+    justify-content: center;
+    padding: 100px 0px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.videoInfo_textBlock{
+    margin-right: 124px;
+}
+.videoInfo_textBlock_title{
+    color: #7050E5;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Proxima';
+}
+.videoInfo_textBlock_subtitle{
+    font-size: 16px;
+    margin-bottom: 38px;
+    color: #878787;
+    font-weight: 400;
+    font-family: 'Proxima';
+    width: 500px;
+}
+.videoInfo_textBlock_button{
+    color: white;
+    background-color: #FF8B00;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Proxima';
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px 40px;
+}
+
