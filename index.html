@@ -21,6 +21,17 @@
                 <a href="#">About</a>
                 <a href="#">Contact us</a>
            </nav>
+           <img class="header_navigationWrapper_hamburgerNav" src="./public/images/menuHamburger.svg" />
+           <div class="header_navigationWrapper_additionalMobileMenu">
+                <button class="header_navigationWrapper_additionalMobileMenu_closeButton"><img src="./public/images/closeIcon.svg"/></button>
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Services</a>
+                <a href="#">Resources</a>
+                <a href="#">About</a>
+                <a href="#">Contact us</a>
+           </div>
+           <div class="header_navigationWrapper_additionalMenuOverlay"></div>
         </div>
         
        <div class="header_offerSlider">
@@ -84,7 +95,7 @@
         <div class="whatWeDo_innerWrapper">
             <div class="whatWeDo_title">
                 <h2 class="whatWeDo_title_text">What We Do</h2>
-                <img class="whatWeDo_title_angel" src="/public/images/tableSectionCarrotAngel.svg"/>
+                <img class="whatWeDo_title_angel" src="./public/images/tableSectionCarrotAngel.svg"/>
             </div>
             <div class="whatWeDo_optionsList">
                 <div class="whatWeDo_optionsList_element">
@@ -150,17 +161,18 @@
                 More info
             </button>
         </div>
-        <div class="videoInfo_videoBlock">
-            <video controls>
+        
+            <video class="videoInfo_videoBlock" controls>
                     <source type="video/mp4" src="./public/videos/No_Copyright_Video_-_Sea_View___Landscape_-_short_clip.mp4"/>
             </video>
-            <div class="videoInfo_videoBlock_ovelay">
-
-            </div>
+           
             
-        </div>
+        
     </section>
     <section class="actionForm">
+        <div class="actionForm_topFadeCircle">
+            <!-- circle -->
+        </div>
         <div class="actionForm_textBlock">
             <h2 class="actionForm_textBlock_title">
                 Ready<br/>
@@ -200,46 +212,98 @@
                 <p class="actionForm_modalWindow_text">Successfull send</p>
                 <div id="actionForm_modalWindow_progressBar" class="actionForm_modalWindow_progressBar"></div>
             </div>
+            <div class="actionForm_bottomFadeCircle">
+                <!-- circle -->
+            </div>
         </div>
     </section>
     <footer class="footer">
-        <div class="footer_twitterApi">
-            <img src="./public/images/twitterApi.png"/>
+        <div class="footer_twitterFeed">
+            <div class="footer_twitterFeed_header">
+                <div class="footer_twitterFeed_header_logo">
+                    <img src="./public/images/twitterSmallLogo.svg" />
+                </div>
+                <div class="footer_twitterFeed_header_info">
+                    <p class="footer_twitterFeed_header_info_hashtag">
+                        @saltgroup 
+                    </p>    
+                    <p class="footer_twitterFeed_header_info_twitterFeed">
+                        Twitter feed
+                    </p>
+                </div>
+            </div>
+            <div class="footer_twitterFeed_body">
+                <div class="footer_twitterFeed_body_twitt">
+                    <p class="footer_twitterFeed_body_twitt_twittName">
+                        Experience more with expanded Tweets
+                    </p>
+                    <p class="footer_twitterFeed_body_twitt_href">
+                        http://testing123.com.au
+                    </p>
+                    <p class="footer_twitterFeed_body_twitt_date">
+                        18 hours ago
+                    </p>
+                </div>
+                <div class="footer_twitterFeed_body_twitt">
+                    <p class="footer_twitterFeed_body_twitt_twittName">
+                        Tailored Trends bring you closer
+                    </p>
+                    <p class="footer_twitterFeed_body_twitt_href">
+                        http://-testing123.com.au
+                    </p>
+                    <p class="footer_twitterFeed_body_twitt_date">
+                        12 June 2016
+                    </p>
+                </div>
+                <div class="footer_twitterFeed_body_twitt">
+                    <p class="footer_twitterFeed_body_twitt_twittName">
+                        Our new nest.
+                    </p>
+                    <p class="footer_twitterFeed_body_twitt_href">
+                        http://testing123.com.au
+                    </p>
+                    <p class="footer_twitterFeed_body_twitt_date">
+                        11 June 2016
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="footer_navigationWrapper">
-            <div class="footer_navigationWrapper_title">
-                <img src="./public/images/activeSliderButton.svg"/>
-                <p>Navigation</p>
+        <div class="footer_linksContainer">
+            <div class="footer_navigationWrapper">
+                <div class="footer_navigationWrapper_title">
+                    <img src="./public/images/activeSliderButton.svg"/>
+                    <p>Navigation</p>
+                </div>
+                <div class="footer_navigationWrapper_links">
+                    <a href="#">home</a>
+                    <a href="#">products</a>
+                    <a href="#">services</a>
+                    <a href="#">resources</a>
+                    <a href="#">about</a>
+                    <a href="#">contact us</a>
+                </div>
             </div>
-            <div class="footer_navigationWrapper_links">
-                <a href="#">home</a>
-                <a href="#">products</a>
-                <a href="#">services</a>
-                <a href="#">resources</a>
-                <a href="#">about</a>
-                <a href="#">contact us</a>
+            <div class="footer_navigationWrapper">
+                <div class="footer_navigationWrapper_title">
+                    <img src="./public/images/activeSliderButton.svg"/>
+                    <p>Links</p>
+                </div>
+                <div class="footer_navigationWrapper_links">
+                    <a href="#">disclaimer</a>
+                    <a href="#">legal</a>
+                    <a href="#">environment<br/>policy</a>
+                    <a href="#">privacy</a>
+                </div>
             </div>
-        </div>
-        <div class="footer_navigationWrapper">
-            <div class="footer_navigationWrapper_title">
-                <img src="./public/images/activeSliderButton.svg"/>
-                <p>Links</p>
-            </div>
-            <div class="footer_navigationWrapper_links">
-                <a href="#">disclaimer</a>
-                <a href="#">legal</a>
-                <a href="#">environment policy</a>
-                <a href="#">privacy</a>
-            </div>
-        </div>
-        <div class="footer_navigationWrapper">
-            <div class="footer_navigationWrapper_title">
-                <img src="./public/images/activeSliderButton.svg"/>
-                <p>contact sales</p>
-            </div>
-            <div class="footer_navigationWrapper_links">
-                <p>Phone: &nbsp  +61 3 9614 4416</p>
-                <p>Email: &nbsp sales@saltgroup.com.au</p>
+            <div class="footer_navigationWrapper">
+                <div class="footer_navigationWrapper_title">
+                    <img src="./public/images/activeSliderButton.svg"/>
+                    <p>contact sales</p>
+                </div>
+                <div class="footer_navigationWrapper_links">
+                    <p>Phone: &nbsp  +61 3 9614 4416</p>
+                    <p>Email: &nbsp sales@saltgroup.com.au</p>
+                </div>
             </div>
         </div>
         <div class="footer_logoIcon">
