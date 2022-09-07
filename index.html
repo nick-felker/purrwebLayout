@@ -14,12 +14,12 @@
                 <img src="./public/images/headerLogo.svg"/>
             </div>
            <nav class="header_navigationWrapper_nav">
-                <a>Home</a>
-                <a>Products</a>
-                <a>Services</a>
-                <a>Resources</a>
-                <a>About</a>
-                <a>Contact us</a>
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Services</a>
+                <a href="#">Resources</a>
+                <a href="#">About</a>
+                <a href="#">Contact us</a>
            </nav>
         </div>
         
@@ -45,9 +45,9 @@
             <p class="header_smoothScrolling_text">
                 find out more
             </p>
-            <button class="header_smoothScrolling_button">
+            <a href="#whatWeDoId" class="header_smoothScrolling_button">
                 <img src="./public/images/smoothScrollingButton.svg"/>
-            </button>
+            </a>
        </div>
     </header>    
     <section class="offerNums">
@@ -80,7 +80,7 @@
         </div>
         
     </section>
-    <section class="whatWeDo">
+    <section class="whatWeDo" id="whatWeDoId">
         <div class="whatWeDo_innerWrapper">
             <div class="whatWeDo_title">
                 <h2 class="whatWeDo_title_text">What We Do</h2>
@@ -137,6 +137,7 @@
             </div>
         </div>
     </section>
+    
     <section class="videoInfo">
         <div class="videoInfo_textBlock">
             <h4 class="videoInfo_textBlock_title">
@@ -150,15 +151,106 @@
             </button>
         </div>
         <div class="videoInfo_videoBlock">
-            <img src="./public/images/video.png" />
+            <video controls>
+                    <source type="video/mp4" src="./public/videos/No_Copyright_Video_-_Sea_View___Landscape_-_short_clip.mp4"/>
+            </video>
+            <div class="videoInfo_videoBlock_ovelay">
+
+            </div>
+            
         </div>
     </section>
     <section class="actionForm">
-
+        <div class="actionForm_textBlock">
+            <h2 class="actionForm_textBlock_title">
+                Ready<br/>
+                to get started?
+            </h2>
+        </div>
+        <div class="actionForm_formBlock">
+            <p class="actionForm_formBlock_title">
+                Conctact us
+            </p>
+            <div class="actionForm_formBlock_formContainer">
+                <div class="actionForm_formBlock_formContainer_bothNames">
+                    <div class="actionForm_formBlock_formContainer_bothNames_firstNameContainer">
+                        <label>First Name</label>
+                        <input placeholder="First Name" type="text" id="userFirstName"/>
+                    </div>
+                    <div class="actionForm_formBlock_formContainer_bothNames_lastNameContainer">
+                        <label>Last Name</label>
+                        <input placeholder="Last Name" type="text" id="userLastName"/>
+                    </div>
+                </div>
+                <div class="actionForm_formBlock_formContainer_email">
+                    <label>Email Address</label>
+                    <input placeholder="Email Address" type="email" id="userEmail"/>
+                </div>
+                <div class="actionForm_formBlock_formContainer_userMessage">
+                    <label>Your message</label>
+                    <textarea class="actionForm_formBlock_formContainer_userMessage" placeholder="Textarea" id="userMessage"></textarea>
+                </div>
+                <div class="actionForm_formBlock_formContainer_sendButton">
+                    <button id="actionForm_sendButton">
+                        Send
+                    </button>
+                </div>
+            </div>
+            <div class="actionForm_modalWindow" id="actionForm_modalWindow">
+                <p class="actionForm_modalWindow_text">Successfull send</p>
+                <div id="actionForm_modalWindow_progressBar" class="actionForm_modalWindow_progressBar"></div>
+            </div>
+        </div>
     </section>
     <footer class="footer">
-
+        <div class="footer_twitterApi">
+            <img src="./public/images/twitterApi.png"/>
+        </div>
+        <div class="footer_navigationWrapper">
+            <div class="footer_navigationWrapper_title">
+                <img src="./public/images/activeSliderButton.svg"/>
+                <p>Navigation</p>
+            </div>
+            <div class="footer_navigationWrapper_links">
+                <a href="#">home</a>
+                <a href="#">products</a>
+                <a href="#">services</a>
+                <a href="#">resources</a>
+                <a href="#">about</a>
+                <a href="#">contact us</a>
+            </div>
+        </div>
+        <div class="footer_navigationWrapper">
+            <div class="footer_navigationWrapper_title">
+                <img src="./public/images/activeSliderButton.svg"/>
+                <p>Links</p>
+            </div>
+            <div class="footer_navigationWrapper_links">
+                <a href="#">disclaimer</a>
+                <a href="#">legal</a>
+                <a href="#">environment policy</a>
+                <a href="#">privacy</a>
+            </div>
+        </div>
+        <div class="footer_navigationWrapper">
+            <div class="footer_navigationWrapper_title">
+                <img src="./public/images/activeSliderButton.svg"/>
+                <p>contact sales</p>
+            </div>
+            <div class="footer_navigationWrapper_links">
+                <p>Phone: &nbsp  +61 3 9614 4416</p>
+                <p>Email: &nbsp sales@saltgroup.com.au</p>
+            </div>
+        </div>
+        <div class="footer_logoIcon">
+            <img src="./public/images/footerLogo.svg" />
+        </div>
     </footer>
+    <section class="underFooterLicense">
+            <p>© 2017 SALT GROUP</p>
+            <img src="./public/images/activeSliderButton.svg"/>
+            <p>ALL RIGHTS RESERVED. WEBSITE BY DORNE CREATIVE.</p>
+    </section>
 
 
 

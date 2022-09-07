@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* common body styles and adding fonts */
 @font-face {
     font-family: 'Proxima';
@@ -20,6 +24,16 @@
     font-family: 'Proxima';
     src: url('../public/fonts/ProximaNova-Semibold.woff');
     font-weight: 600;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../public/fonts/Raleway-Medium.woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../public/fonts/Raleway-ExtraLight.woff');
+    font-weight: 200;
 }
 body{
     background-color: white;
@@ -230,6 +244,27 @@ body{
 .videoInfo_textBlock{
     margin-right: 124px;
 }
+.videoInfo_videoBlock{
+    
+}
+.videoInfo_videoBlock video{
+    width: 720px;
+    z-index: -1;
+    height: 444px;
+    
+}
+
+.videoInfo_videoBlock_overlay{
+    background-color: gray;
+    width: 720px;
+    height: 444px;
+    position: absolute;
+    z-index: 2;
+}
+.videoInfo_videoBlock_overlay:hover{
+    opacity: 0;
+    transition: 0.3s;
+}
 .videoInfo_textBlock_title{
     color: #7050E5;
     font-size: 40px;
@@ -258,4 +293,260 @@ body{
     text-transform: uppercase;
     padding: 20px 40px;
 }
+.videoInfo_textBlock_button:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
 
+
+/* action user form styles */
+.actionForm{
+    background-color: #232323;
+    padding: 200px 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+
+}
+.actionForm_textBlock_title{
+    color: white;
+    font-family: 'Proxima';
+    font-size: 55px;
+    font-weight: 700;
+}
+.actionForm_formBlock_title{
+    color: white;
+    font-size: 28px;
+    font-family: 'Proxima';
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+.actionForm_formBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.actionForm_formBlock_formContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 650px;
+
+}
+
+.actionForm_formBlock_formContainer_bothNames{
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+    position: relative;
+    width: 100%;
+}
+.actionForm_formBlock_formContainer_bothNames_firstNameContainer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
+.actionForm_formBlock_formContainer_bothNames_lastNameContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
+.actionForm_formBlock_formContainer_email{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 28px;
+}
+.actionForm_formBlock_formContainer_userMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
+.actionForm_formBlock_formContainer_userMessage textarea{
+    height: 100px;
+    font-size: 15px;
+    font-weight: 200;
+    font-family: 'Raleway';
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 15px 0px 10px 15px;
+    resize: none;
+}
+.actionForm_formBlock_formContainer_errorInputField{
+    border: 2px solid red !important;
+}
+.actionForm_formBlock_formContainer_succesInputField{
+    border: 2px solid green !important;
+}
+.actionForm_modalWindow{
+    position: fixed;
+    top: 40px;
+    background-color: #363636;
+    padding: 20px 40px;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    display: none;
+}
+.actionForm_modalWindow_text{
+    color: white;
+    font-family: 'Proxima';
+    font-weight: 600;
+    font-size: 19px;
+}
+.actionForm_modalWindow_progressBar{
+    height: 3px;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    bottom: 0px;
+    background-color: #05C168;
+    position: absolute;
+    
+}
+
+
+.actionForm_formBlock_formContainer_sendButton{
+    margin-top: 32px;
+}
+.actionForm_formBlock_formContainer_sendButton button{
+    background-color: #FF8B00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Proxima';
+    text-transform: uppercase;
+    padding: 20px 80px;
+}
+.actionForm_formBlock_formContainer_sendButton button:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.actionForm_formBlock_formContainer label{
+    color: white;
+    font-size: 14px;
+    font-family: 'Proxima';
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.actionForm_formBlock_formContainer_email{
+    position: relative;
+    width: 100%;
+}
+.actionForm_formBlock_formContainer input::placeholder{
+    font-size: 15px;
+    font-family: 'Raleway';
+    font-weight: 200;
+    color: black;
+}
+.actionForm_formBlock_formContainer input{
+    font-size: 15px;
+    font-weight: 200;
+    font-family: 'Raleway';
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 15px 0px 15px 15px;
+}
+
+/* footer section styles */
+.footer{
+    background-color: #363636;
+    padding: 56px 0px 80px 340px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.footer_twitterApi{
+    margin-right: 120px;
+}
+.footer_navigationWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-right: 130px;
+}
+.footer_navigationWrapper:last-child{
+    margin-right: 0px;
+}
+.footer_navigationWrapper_links{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.footer_navigationWrapper_links a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Proxima';
+    margin-bottom: 10px;
+}
+.footer_navigationWrapper_links p{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Proxima';
+    margin-bottom: 10px;
+}
+.footer_navigationWrapper_links a:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.footer_navigationWrapper_links a:last-child{
+    margin-bottom: 0px;
+}
+.footer_navigationWrapper_title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer_navigationWrapper_title p{
+    margin-left: 10px;
+    color: #FF8B00;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Proxima';
+}
+.footer_logoIcon{
+    position: relative;
+    top: 250px;
+    margin-left: 50px;
+}
+
+/* under footer license section style */
+
+.underFooterLicense{
+    background-color: #252525;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.underFooterLicense p{
+    color: white;
+    font-family: 'Raleway';
+    font-size: 11px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.underFooterLicense img{
+    padding: 0px 5px;
+}
