@@ -1,5 +1,5 @@
 /*common styles for all DOM elements */
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -12,27 +12,27 @@ html{
 /* common body styles and adding fonts */
 @font-face {
     font-family: 'Proxima';
-    src: url('../public/fonts/ProximaNova-RegularIt.woff');
+    src: url('../../public/fonts/ProximaNova-RegularIt.woff');
     font-weight: 400;
 }
 @font-face {
     font-family: 'Proxima';
-    src: url('../public/fonts/ProximaNova-Bold.woff');
+    src: url('../../public/fonts/ProximaNova-Bold.woff');
     font-weight: 700;
 }
 @font-face {
     font-family: 'Proxima';
-    src: url('../public/fonts/ProximaNova-Semibold.woff');
+    src: url('../../public/fonts/ProximaNova-Semibold.woff');
     font-weight: 600;
 }
 @font-face {
     font-family: 'Raleway';
-    src: url('../public/fonts/Raleway-Medium.woff');
+    src: url('../../public/fonts/Raleway-Medium.woff');
     font-weight: 500;
 }
 @font-face {
     font-family: 'Raleway';
-    src: url('../public/fonts/Raleway-ExtraLight.woff');
+    src: url('../../public/fonts/Raleway-ExtraLight.woff');
     font-weight: 200;
 }
 body{
@@ -42,13 +42,11 @@ body{
 /* header styles */
 .header{
     font-family: 'Proxima';
-    background-image: url('../public/images/headerBackgroundImage.svg');
+    background-image: url('../../public/images/headerBackgroundImage.svg');
     background-position: bottom;
     background-size: cover;
     padding-bottom: 50px;
-    background-repeat: no-repeat
-    
-    
+    background-repeat: no-repeat;
 }
 .header_navigationWrapper{
     padding: 20px 220px;

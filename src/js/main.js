@@ -57,6 +57,15 @@ function validateActionForm() {
 
     }
 }
+//function to smooth scroll 
+function smoothScroll() {
+    const whatWeDoSection = document.getElementsByClassName("whatWeDo");
+    window.scrollTo({
+        top: whatWeDoSection.getBoundingClientRect().y,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
 
 // function to roll slider by dots
 function rollSlider(dotNum, dotsArray) {
@@ -168,12 +177,33 @@ window.onload = function () {
     }
     // init slider dots
     initSliderDots(documentOptions.headerSliderImagesCount, documentOptions.defaultAcitiveSlide);
+
+    // smooth scroll
+
+    const smoothScrollButton = document.getElementsByClassName("header_smoothScrolling_button")[0];
+    const whatWeDoSection = document.getElementsByClassName("whatWeDo")[0];
+    smoothScrollButton.onclick = (() => {
+
+        const headerSection = document.getElementsByClassName("header")[0];
+        const offerNumsSection = document.getElementsByClassName("offerNums")[0];
+        const currentWindowPosition = window.pageYOffset;
+        console.log(currentWindowPosition);
+        const commonHeaderAndOfferNumsSectionsHeight = headerSection.offsetHeight + offerNumsSection.offsetHeight;
+        console.log(commonHeaderAndOfferNumsSectionsHeight);
+        let counter = currentWindowPosition;
+        const scrollingProcces = setInterval(() => {
+            if (counter > commonHeaderAndOfferNumsSectionsHeight * 1.3) {
+                clearInterval(scrollingProcces);
+            }
+            window.scrollTo({
+                top: counter,
+            })
+            counter += 20;
+        }, 10)
+    })
 }
 
 
 
-document.onclick = (() => {
-    let b = document.getElementsByClassName("header_offerSlider_sliderLine")[0];
-    let a = b.offsetWidth;
-    console.log(a)
-})
+
+
