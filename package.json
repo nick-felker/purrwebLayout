@@ -1,0 +1,23 @@
+{
+  "name": "purrweb_testwork",
+  "version": "1.0.0",
+  "description": "purrweb test work (stazher verstalshik])",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nick-felker/purrwebLayout.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nick-felker/purrwebLayout/issues"
+  },
+  "homepage": "https://github.com/nick-felker/purrwebLayout#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0"
+  }
+}

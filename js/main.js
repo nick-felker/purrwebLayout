@@ -102,9 +102,6 @@ function initSliderDots(sliderCountElements, defaultAcitiveSlide) {
     })
 }
 
-
-
-
 actionFormSubmitButton.onclick = function () {
     validateActionForm();
 };
