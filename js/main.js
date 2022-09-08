@@ -1,19 +1,17 @@
 'use strict'
 
 // common document options
-const documentOptions = {
-    headerSliderImagesCount: 3,
-
-}
-// // freeze document to prevent changes
-// Object.freeze(documentOptions);
 
 // init actionForm submit button
 const actionFormSubmitButton = document.getElementById('actionForm_sendButton');
 // validation form function 
 
 function validateActionForm() {
-    let modalWindowSentFlag;
+    const successfullSendModalContainer = document.getElementsByClassName("actionForm_modalWindow")[0];
+    if (successfullSendModalContainer.style.display === "block") {
+        return;
+    }
+    let successInputFlag = true;
     //init input constants from html dom
     const firstName = document.getElementById('userFirstName'),
         lastName = document.getElementById('userLastName'),
@@ -23,14 +21,14 @@ function validateActionForm() {
     inputsArray.map((elem) => {
         if (!!elem.value.trim()) {
             elem.classList.add('actionForm_formBlock_formContainer_succesInputField');
-            modalWindowSentFlag = true;
         }
         else {
             elem.classList.add('actionForm_formBlock_formContainer_errorInputField');
-            modalWindowSentFlag = false;
+            successInputFlag = false;
         }
     })
-    if (modalWindowSentFlag === true) {
+
+    if (successInputFlag === true) {
         const actionFormModalWindow = document.getElementById('actionForm_modalWindow');
         const progressBar = document.getElementById('actionForm_modalWindow_progressBar');
         actionFormModalWindow.style.display = 'block';
@@ -41,15 +39,17 @@ function validateActionForm() {
             progressBar.style.width = progressBarWidth + "%";
             progressBarWidth -= 1;
             if (progressBarWidth === 0) {
-                clearInterval(progressBarProcess);
                 inputsArray.map((elem) => {
-                    elem.classList.remove('actionForm_formBlock_formContainer_succesInputField');
+                    elem.classList.remove("actionForm_formBlock_formContainer_succesInputField");
+                    elem.classList.remove("actionForm_formBlock_formContainer_errorInputField");
                 })
                 actionFormModalWindow.style.display = "none";
+                actionFormSubmitButton.addEventListener('click', validateActionForm);
+                clearInterval(progressBarProcess);
+                return 0;
             }
         }, 10)
-        actionFormSubmitButton.addEventListener('click', validateActionForm);
-        return 0;
+
     }
     else {
         actionFormSubmitButton.addEventListener('click', validateActionForm);
@@ -57,6 +57,53 @@ function validateActionForm() {
 
     }
 }
+
+// function to roll slider by dots
+function rollSlider(dotNum, dotsArray) {
+    let currentActiveDot;
+    dotsArray.map((elem) => {
+        if (dotsArray.indexOf(elem) + 1 === dotNum) {
+            elem.setAttribute("src", "./public/images/activeSliderButton.svg");
+            currentActiveDot = dotsArray.indexOf(elem) + 1;
+        }
+        else {
+            elem.setAttribute("src", "./public/images/sliderButton.svg");
+        }
+    })
+    const sliderContainer = document.getElementsByClassName("header_offerSlider")[0];
+    const sliderElement = document.getElementsByClassName("header_offerSlideElement")[0];
+    const sliderLine = document.getElementsByClassName("header_offerSlider_sliderLine")[0];
+    sliderLine.style.transition = "0.5s";
+    sliderLine.style.marginLeft = -(dotNum * sliderElement.offsetWidth) + sliderElement.offsetWidth + "px";
+
+}
+
+// init slider dots 
+function initSliderDots(sliderCountElements, defaultAcitiveSlide) {
+    const externalSliderContainer = document.getElementsByClassName("header_offerSlider_slider")[0];
+    const dotsArray = [];
+    for (let i = 1; i <= sliderCountElements; i++) {
+        const dot = document.createElement("img");
+        if (i === defaultAcitiveSlide) {
+            dot.setAttribute("src", "./public/images/activeSliderButton.svg");
+        }
+        else {
+            dot.setAttribute("src", "./public/images/sliderButton.svg");
+        }
+        dot.classList.add("header_offerSlider_slider_elem");
+        dot.addEventListener('click', () => {
+            rollSlider(i, dotsArray);
+        })
+        dot.setAttribute("id", i);
+        dotsArray.push(dot);
+    }
+    dotsArray.map((elem) => {
+        externalSliderContainer.append(elem);
+    })
+}
+
+
+
 
 actionFormSubmitButton.onclick = function () {
     validateActionForm();
@@ -66,7 +113,10 @@ actionFormSubmitButton.onclick = function () {
 
 window.onload = function () {
     // header navigation links containter
-
+    const documentOptions = {
+        headerSliderImagesCount: 3,
+        defaultAcitiveSlide: 1,
+    }
     if (window.innerWidth <= 1200) {
         const navigationContainer = document.getElementsByClassName('header_navigationWrapper_nav')[0];
         navigationContainer.style.display = "none";
@@ -119,4 +169,14 @@ window.onload = function () {
         videoSectionTextBlock.style.display = "flex";
         videoSectionTextBlock.style.flexDirection = "column";
     }
+    // init slider dots
+    initSliderDots(documentOptions.headerSliderImagesCount, documentOptions.defaultAcitiveSlide);
 }
+
+
+
+document.onclick = (() => {
+    let b = document.getElementsByClassName("header_offerSlider_sliderLine")[0];
+    let a = b.offsetWidth;
+    console.log(a)
+})

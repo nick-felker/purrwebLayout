@@ -72,7 +72,7 @@ body{
     right: 10px;
     top: 10px;
     flex-direction: column;
-    z-index: 4;
+    z-index: 999;
     padding: 30px 45px 20px 25px;
 }
 .header_navigationWrapper_additionalMobileMenu a{
@@ -128,13 +128,16 @@ body{
 .header_navigationWrapper_nav a:last-child{
     margin-right: 0px;
 }
-.header_offerSlider_text_title{
+.header_offerSlideElement_text{
+    margin-right: 220px;
+}
+.header_offerSlideElement_text_title{
     font-weight: 700;
     font-family: 'Proxima';
     font-size: 55px;
     color: white;
 }
-.header_offerSlider_text_subtitle{
+.header_offerSlideElement_text_subtitle{
     font-weight: 600;
     font-size: 16px;
     margin-top: 15px;
@@ -143,7 +146,39 @@ body{
     color: white;
     width: 500px;
 }
-.header_offerSlider_text_button{
+.header_offerSlider{
+    position: relative;
+    width: 870px;
+    overflow: hidden;
+    margin-left: 200px;
+    display: flex;
+    
+    align-items: center;
+}
+.header_offerSlider_sliderLine{
+    position: relative;
+    display: flex;
+}
+.header_offerSlider_slider{
+    position: absolute;
+    z-index: 4;
+    top: 300px;
+    right: 54px;
+    display: flex;
+    flex-direction: column;
+}
+.header_offerSlider_slider_elem{
+    cursor: pointer;
+    margin-bottom: 13px;
+}
+.header_offerSlider_slider_elem:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.header_offerSlider_slider_elem:last-child{
+    margin-bottom: 0px;
+}
+.header_offerSlideElement_text_button{
     background-color: #FF8B00;
     outline: none;
     border: none;
@@ -157,12 +192,12 @@ body{
     font-weight: 600;
     text-transform: uppercase;
 }
-.header_offerSlider_text_button:hover{
+.header_offerSlideElement_text_button:hover{
     opacity: 0.5;
     transition: 0.5s;
 }
-.header_offerSlider{
-    padding: 70px 270px 40px 200px;
+.header_offerSlideElement{
+    padding: 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -464,11 +499,12 @@ body{
 }
 .actionForm_modalWindow{
     position: fixed;
-    top: 40px;
+    top: 50%;
     background-color: #363636;
     padding: 20px 40px;
+    left: 50%;
     overflow: hidden;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -500%);
     border-radius: 5px;
     display: none;
 }
@@ -532,7 +568,7 @@ body{
     font-family: 'Raleway';
     border-radius: 5px;
     outline: none;
-    border: 1px solid #D2D6DA;
+    border: 2px solid #D2D6DA;
     padding: 15px 0px 15px 15px;
 }
 
@@ -708,6 +744,9 @@ body{
 
 
 /* adaptive */
+@media (max-width: 1600px) {
+    
+}
 @media (max-width: 1500px) {
     .footer_navigationWrapper{
         margin-right: 60px;
@@ -715,13 +754,14 @@ body{
     .footer{
         padding: 56px 0px 80px 100px;
     }
-    .header_offerSlider{
+    .header_offerSlideElement{
         margin-bottom: 100px;
     }
+    
 }
 @media (max-width: 1400px) {
     .header_offerSlider{
-        padding: 70px 100px 40px 100px;
+        margin-left: 100px;
     }
 }
 @media (max-width: 1300px) {
@@ -739,6 +779,7 @@ body{
     .header_navigationWrapper{
         padding: 30px 100px;
     }
+    
 }
 @media (max-width: 1200px) {
     .whatWeDo_innerWrapper{
@@ -796,15 +837,29 @@ body{
         padding: 30px 0px;
     }
 }
-@media (max-width: 990px) {
-    .header_offerSlider{
+@media (max-width: 1072px) {
+    .header_offerSlider_slider{
+       
+    }
+    .header_offerSlideElement_image{
+        margin: 0px;
+    }
+   .header_offerSlideElement{
+        margin-top: 50px;
         flex-direction: column-reverse;
         align-items: flex-start;
+        
+   }
+   .header_offerSlider{
+        width: 500px;
+        margin-bottom: 50px;
+   }
+}
+@media (max-width: 990px) {
+    .header_offerSlideElement_image{
+        margin: 0 auto 40px 20px;
     }
-    .header_offerSlider_image{
-        margin: 0 auto 40px auto;
-    }
-    .header_offerSlider{
+    .header_offerSlideElement{
         margin-bottom: 50px;
     }
 }
@@ -886,16 +941,16 @@ body{
     .whatWeDo_optionsList_element:last-child{
         margin-bottom: 0px;
     }
-    .header_offerSlider_text_title{
+    .header_offerSlideElement_text_title{
         font-size: 32px;
         width: 214px;
     }
-    .header_offerSlider_text_subtitle{
+    .header_offerSlideElement_text_subtitle{
         font-size: 14px;
         line-height: 17px;
         width: 300px;
     }
-    .header_offerSlider_image img{
+    .header_offerSlideElement_image img{
         width: 100px;
     }
     .offerNums_elem_num{
@@ -911,14 +966,18 @@ body{
     .header_navigationWrapper_logo img{
         width: 40px;
     }
-    .header_offerSlider{
-        padding: 0px;
+    .header_offerSlideElemet{
+        padding: 0px 0px 0px 50px;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 70px;
     }
     .footer_logoIcon{
         transform: translate(-10%, -50%);
+    }
+    .header_offerSlider{
+        margin-left: 50px;
+        width: 400px;
     }
 }
 @media (max-width: 500px) {
@@ -927,9 +986,57 @@ body{
     }
     .underFooterLicense img{
         width: 15px;
+        
     }
+   
     .footer_logoIcon{
         transform: translate(-20%, -50%);
     }
+    .actionForm_modalWindow{
+        bottom: 0;
+        transform: translate(-50%, -0);
+        top: unset;
+        width: 100%;
+        border-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 40px 0px;
+    }
+    .actionForm_modalWindow_text{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .actionForm_modalWindow_progressBar{
+        height: 5px;
+    }
+    .actionForm_bottomFadeCircle{
+        display: none;
+    }
+    .header_offerSlider{
+        margin-left: 50px;
+        width: 300px;
+        padding-left: 0px ;
+    }
+    .header_offerSlider_slider{
+        top: 200px;
+    }  
+    .header_offerSlider{
+        margin-left: 20px;
+        width: 220px;
+    } 
     
+}
+@media (max-width: 370px) {
+    .header_navigationWrapper{
+        padding: 20px;
+    }
+    .header_offerSlider{
+        
+    }
+    .header_offerSlideElement_text_subtitle{
+        width: 220px;
+    }
+    .header_offerSlider_slider{
+        display: none;
+    }
 }
