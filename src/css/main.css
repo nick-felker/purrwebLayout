@@ -855,7 +855,7 @@ body{
 }
 @media (max-width: 990px) {
     .header_offerSlideElement_image{
-        margin: 0 auto 40px 20px;
+        margin: 0 50px;
     }
     .header_offerSlideElement{
         margin-bottom: 50px;
@@ -870,6 +870,7 @@ body{
     .videoInfo_videoBlock{
         width: 300px;
         height: 250px;
+        margin: 20px auto;
     }
     .videoInfo_textBlock_title{
         font-size: 24px;
@@ -880,9 +881,6 @@ body{
         width: 300px;
         padding-bottom: 0px;
         font-size: 15px;
-    }
-    .videoInfo_textBlock_button{
-        margin: 15px 0px !important;
     }
     .videoInfo_textBlock{
         justify-content: center;
@@ -912,9 +910,7 @@ body{
         font-size: 32px;
         
     }
-    .whatWeDo_optionsList_element{
-        margin-left: 20px;
-    }
+   
     .whatWeDo_optionsList_element_image{
         width: 90px;
         margin-left: 70px;
@@ -959,10 +955,12 @@ body{
     }
     .header_navigationWrapper{
         padding: 20px 50px;
-        margin-bottom: 70px;
+        margin-bottom: 0px;
     }
     .header_navigationWrapper_logo img{
         width: 40px;
+        margin: 0 auto;
+        position: relative;
     }
     .header_offerSlideElemet{
         padding: 0px 0px 0px 50px;
@@ -975,8 +973,20 @@ body{
     }
     .header_offerSlider{
         margin-left: 50px;
-        width: 400px;
+        width: 320px;
     }
+    .header_offerSlideElement_text{
+        margin-right: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 20px;
+    }
+    .header_offerSlideElement{
+        margin-top: 32px;
+        align-items: center;
+    }
+    
 }
 @media (max-width: 500px) {
     .underFooterLicense p{
@@ -1009,31 +1019,61 @@ body{
     .actionForm_bottomFadeCircle{
         display: none;
     }
-    .header_offerSlider{
-        margin-left: 50px;
-        width: 300px;
-        padding-left: 0px ;
-    }
+
     .header_offerSlider_slider{
         top: 200px;
     }  
     .header_offerSlider{
-        margin-left: 20px;
-        width: 220px;
+        padding-left: 0px ;
+        width: 240px;
     } 
+    .footer_linksContainer{
+        width: 280px;
+    }
+    .whatWeDo{
+        padding-top: 62px;
+        padding-bottom: 40px;
+    }
+    
     
 }
 @media (max-width: 370px) {
     .header_navigationWrapper{
         padding: 20px;
     }
-    .header_offerSlider{
-        
-    }
     .header_offerSlideElement_text_subtitle{
         width: 220px;
     }
     .header_offerSlider_slider{
         display: none;
+    }
+    .header_offerSlideElement_text_button{
+        margin-top: 20px;
+    }
+    .actionForm{
+        padding: 70px 0px 40px 0px;
+    }
+    .actionForm_textBlock_title{
+        margin-bottom: 60px;
+    }
+    .whatWeDo_innerWrapper{
+        width: 280px;
+    }
+    .videoInfo_textBlock_subtitle{
+        font-size: 13px;
+    }
+    .videoInfo_videoBlock{
+        width: 270px;
+        height: 160px;
+        margin: 20px auto 0px auto;
+    }
+    .actionForm_formBlock_formContainer{
+        align-items: flex-start;
+    }
+    .header_offerSlideElement_text_title{
+        font-size: 24px;
+    }
+    .header_offerSlider{
+        margin-left: 30px;
     }
 }
